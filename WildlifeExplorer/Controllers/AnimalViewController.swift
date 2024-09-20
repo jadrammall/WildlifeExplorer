@@ -22,14 +22,7 @@ class AnimalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
-        if selectedAnimal == nil {
-            animalImageView.image = nil
-            nameLabel.text = ""
-            soundLabel.text = ""
-            habitatLabel.text = ""
-            dietLabel.text = ""
-            behaviorLabel.text = ""
-        }
+        clearLabelsAndImage()
     }
     
     @IBAction func onRandomButtonTap(_ sender: Any) {
@@ -41,6 +34,26 @@ class AnimalViewController: UIViewController {
             habitatLabel.text = "Habitat: \(animal.habitat)"
             dietLabel.text = "Diet: \(animal.diet)"
             behaviorLabel.text = "Special Behavior: \(animal.uniqueBehavior())"
+            
+            animal.playSound()
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Stop the sound if it's playing
+        if let animal = selectedAnimal, let player = animal.player, player.isPlaying {
+            player.stop()
+        }
+    }
+    
+    func clearLabelsAndImage() {
+        animalImageView.image = nil
+        nameLabel.text = ""
+        soundLabel.text = ""
+        habitatLabel.text = ""
+        dietLabel.text = ""
+        behaviorLabel.text = ""
     }
 }
