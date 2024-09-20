@@ -1,24 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WildlifeExplorer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jungle1" translatesAutoresizingMaskIntoConstraints="NO" id="hd0-DK-u6g">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wildlife Explorer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XY-oO-e4a">
+                                <rect key="frame" x="68.666666666666686" y="396.33333333333331" width="256" height="59.333333333333314"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="50"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="yUv-pO-4A1">
+                                <rect key="frame" x="46.666666666666657" y="588" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="a1b-bk-Q94"/>
+                                    <constraint firstAttribute="height" constant="200" id="ddB-rf-JbQ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsL-kL-Viw">
+                                <rect key="frame" x="99" y="660" width="194" height="56"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Explore Animals">
+                                    <fontDescription key="titleFontDescription" name="PartyLetPlain" family="Party LET" pointSize="36"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onExploreButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GPQ-B0-aeW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rsL-kL-Viw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="9UV-VK-xJc"/>
+                            <constraint firstItem="rsL-kL-Viw" firstAttribute="centerX" secondItem="yUv-pO-4A1" secondAttribute="centerX" id="Jpl-oC-INi"/>
+                            <constraint firstItem="hd0-DK-u6g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UNn-x3-5Kr"/>
+                            <constraint firstAttribute="trailing" secondItem="hd0-DK-u6g" secondAttribute="trailing" id="UxX-c5-CVH"/>
+                            <constraint firstItem="yUv-pO-4A1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z7e-0Q-WIv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yUv-pO-4A1" secondAttribute="bottom" constant="30" id="fVe-ek-ZOR"/>
+                            <constraint firstItem="hd0-DK-u6g" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="g46-jc-1tO"/>
+                            <constraint firstAttribute="bottom" secondItem="hd0-DK-u6g" secondAttribute="bottom" id="lL6-oB-OMq"/>
+                            <constraint firstItem="0XY-oO-e4a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sUC-tQ-3R9"/>
+                            <constraint firstItem="rsL-kL-Viw" firstAttribute="centerY" secondItem="yUv-pO-4A1" secondAttribute="centerY" id="v6f-d9-gB0"/>
+                            <constraint firstItem="0XY-oO-e4a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xuE-bB-2sc"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cloud" width="512" height="512"/>
+        <image name="jungle1" width="4096" height="4096"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
