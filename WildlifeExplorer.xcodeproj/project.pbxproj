@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXFileReference section */
@@ -92,7 +92,7 @@
 				};
 			};
 			buildConfigurationList = 9D8E818D2C9D762900D698DD /* Build configuration list for PBXProject "WildlifeExplorer" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (

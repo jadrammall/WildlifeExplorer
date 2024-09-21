@@ -34,7 +34,6 @@ class AnimalViewController: UIViewController {
             habitatLabel.text = "Habitat: \(animal.habitat)"
             dietLabel.text = "Diet: \(animal.diet)"
             behaviorLabel.text = "Special Behavior: \(animal.uniqueBehavior())"
-            
             animal.playSound()
         }
     }
