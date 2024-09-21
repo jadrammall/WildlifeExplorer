@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXFileReference section */
@@ -11,7 +11,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9D8E81A42C9D762C00D698DD /* Exceptions for "WildlifeExplorer" folder in "WildlifeExplorer" target */ = {
+		9D8E81A42C9D762C00D698DD /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -21,14 +21,7 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9D8E81942C9D762900D698DD /* WildlifeExplorer */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				9D8E81A42C9D762C00D698DD /* Exceptions for "WildlifeExplorer" folder in "WildlifeExplorer" target */,
-			);
-			path = WildlifeExplorer;
-			sourceTree = "<group>";
-		};
+		9D8E81942C9D762900D698DD /* WildlifeExplorer */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (9D8E81A42C9D762C00D698DD /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = WildlifeExplorer; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +92,7 @@
 				};
 			};
 			buildConfigurationList = 9D8E818D2C9D762900D698DD /* Build configuration list for PBXProject "WildlifeExplorer" */;
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -107,7 +101,6 @@
 			);
 			mainGroup = 9D8E81892C9D762900D698DD;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 9D8E81932C9D762900D698DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
