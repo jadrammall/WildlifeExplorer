@@ -18,6 +18,7 @@ class AnimalViewController: UIViewController {
     
     let animals: [Animal] = [Lion(), Snake(), Horse()]
     var selectedAnimal: Animal?
+    var lastSelectedAnimal: Animal?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,12 @@ class AnimalViewController: UIViewController {
     }
     
     @IBAction func onRandomButtonTap(_ sender: Any) {
-        selectedAnimal = animals.randomElement()
+        repeat {
+            selectedAnimal = animals.randomElement()
+        } while selectedAnimal?.name == lastSelectedAnimal?.name
+                    
         if let animal = selectedAnimal {
+            lastSelectedAnimal = animal
             animalImageView.image = UIImage(named: "\(animal.name.lowercased())")
             nameLabel.text = "Name: \(animal.name)"
             soundLabel.text = "Sound: \(animal.sound)"
